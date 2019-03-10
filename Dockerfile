@@ -1,0 +1,24 @@
+# Use Ubuntu 18.04
+FROM ubuntu:18.04
+
+# Update
+RUN apt-get -y update
+
+# Install MySQL lib
+RUN apt-get -y install libmysqlclient-dev
+
+# Install python and pip
+RUN apt-get -y install python3 python-pip build-essential
+
+# Install MySQL for Python
+RUN pip install MySQL-python
+
+# Install jam.py
+RUN pip install jam.py
+
+RUN jam-project.py
+
+# Expose the 8080 port
+EXPOSE 8080/tcp
+
+CMD ["python","server.py"]
