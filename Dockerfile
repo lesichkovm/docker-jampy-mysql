@@ -23,4 +23,5 @@ RUN cd /web; jam-project.py
 # Expose the 8080 port
 EXPOSE 8080/tcp
 
+# Run jam.py
 CMD ["python","/web/server.py"]
