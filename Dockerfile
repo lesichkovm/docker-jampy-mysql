@@ -1,4 +1,4 @@
-# Use Ubuntu 18.04
+# Use Ubuntu 18.04 LTS
 FROM ubuntu:18.04
 
 # Update
@@ -16,9 +16,11 @@ RUN pip install MySQL-python
 # Install jam.py
 RUN pip install jam.py
 
-RUN jam-project.py
+# Create project directory
+RUN mkdir /web
+RUN cd /web; jam-project.py
 
 # Expose the 8080 port
 EXPOSE 8080/tcp
 
-CMD ["python","server.py"]
+CMD ["python","/web/server.py"]
