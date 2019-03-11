@@ -2,7 +2,7 @@
 
 A docker image for the "jam.py" framework ready to work with MySQL / MariaDB out of the box
 
-The official website of the "jam.py" framework: http://jam-py.com/
+The official website of the "jam.py" framework can be found at: http://jam-py.com/
 
 Exported port: 8080
 
